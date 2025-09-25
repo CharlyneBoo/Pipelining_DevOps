@@ -1,14 +1,13 @@
 name: Lint Angular Code
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+
 on:
   pull_request:
     branches: 
       - main
 
 jobs: 
-  name: Lint
   lint:
-    build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,4 +23,4 @@ jobs:
       run: npm install
 
       -name: Run eslint
-      run: npm run eslint
+      run: npm run lint
