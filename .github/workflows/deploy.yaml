@@ -28,7 +28,7 @@ jobs:
       working-directory: hello-world
 
     - name: Upload build artifact
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         path: hello-world/dist/hello-world
 
