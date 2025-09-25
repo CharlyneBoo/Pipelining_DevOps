@@ -1,0 +1,28 @@
+name: Lint Angular Code
+
+
+on:
+  pull_request:
+    branches: 
+      - main
+
+jobs: 
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+      
+    - name: install dependencies
+      run: npm install
+      working-directory: hello-world
+
+    - name: Run eslint
+      run: npm run lint
+      working-directory: hello-world
