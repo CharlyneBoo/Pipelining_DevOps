@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: checkout
+    - name: checkout
       uses: actions/checkout@v3
 
-      -name: Setup Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '20'
       
-      -name: install dependencies
+    - name: install dependencies
       run: npm install
 
-      -name: Run eslint
+    - name: Run eslint
       run: npm run lint
