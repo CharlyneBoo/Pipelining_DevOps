@@ -30,9 +30,10 @@ jobs:
     - name: Upload build artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: hello-world/dist/hello-world
+        path: hello-world/dist/hello-world/browser
 
   deploy:
+    
     
     needs: build
     runs-on: ubuntu-latest
