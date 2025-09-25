@@ -21,6 +21,8 @@ jobs:
       
     - name: install dependencies
       run: npm install
+      working-directory: hello-world
 
     - name: Run eslint
       run: npm run lint
+      working-directory: hello-world
